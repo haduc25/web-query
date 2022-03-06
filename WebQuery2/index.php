@@ -35,14 +35,25 @@
 			$ctl->savePost();
 			break;
 
-		case
 		
 		//del
-		case 'post/del_post':
+		case 'posts/del_post':
 			$ctl = new PostsController();
-			$ctl->savePost();
+			$ctl->delPost();
+			break;
+
+		//delete_post
+		case 'posts/delete_post':
+			$ctl = new PostsController();
+			$ctl->deletePost();
 			break;
 		
+
+
+
+
+
+
 		// products
 		case 'products/create_product':
 			$ctl = new ProductsController();

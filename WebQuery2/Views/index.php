@@ -38,8 +38,8 @@
 					<td><?=$post->author ?></td>
 					<td><?=$post->createby ?></td>
 					<td>
-						<a class="nut" href="">Sửa</a> |
-						<a class="nut" href="#">Xóa</a>
+						<a class="nut" href="#">Sửa</a> |
+						<a class="nut" href="./posts/del_post?id=<?=$post->id?> ">Xóa</a>
 					</td>
 				</tr>
 		<?php  } ?>

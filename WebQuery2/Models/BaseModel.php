@@ -25,6 +25,7 @@ class BaseModel
 
 	//insert
 	   public function insert(){
+        // var_dump($this->tableName); exit();
         $this->queryBuilder = "insert into $this->tableName (";
         foreach ($this->columns as $col) {
             if($this->{$col} == null){
@@ -56,8 +57,12 @@ class BaseModel
 
     //delete
     public function delete($id){
-        $this->queryBuilder = "delete from $this->tableName where id = $this->id";
-        $stmt = $this->connect->prepare($this->queryBuilder);
+        // var_dump($id); exit();
+        // var_dump($this->tableName); exit();
+        $this->queryBuilder = "delete from $this->tableName where id = $id";
+        // var_dump($queryBuilder); exit();
+
+        $stmt = $this->conn->prepare($this->queryBuilder);
         try{
 
             $stmt->execute();
