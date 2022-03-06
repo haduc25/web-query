@@ -11,15 +11,21 @@ h1{
 }
 label{
 	padding: 20px;
+	margin-left: 35px;
 	color: white;
 	font-size: 20px;
 }
 input, textarea{
 	width: 650px;
-	padding: 15px;
+	padding: 5px 15px;
 	margin: 15px;
 	/*text-align: center;*/
 	margin-left:50px;
+}
+
+.container input
+{
+	font-size: 18px;
 }
 
 .btn-submit .btn{

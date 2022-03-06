@@ -3,6 +3,7 @@
 	require_once './Controllers/HomeController.php';
 	require_once './Controllers/UserController.php';
 	require_once './Controllers/PostsController.php';
+	require_once './Controllers/ProductsController.php';
 
 	switch ($url) 
 	{
@@ -21,16 +22,37 @@
 			$ctl->saveUser();
 			break;
 
+		// posts
+		
 		case 'posts/create_post':
 			$ctl = new PostsController();
 			$ctl->create_post();
 			break;
-
+		
+		//insert
 		case 'posts/save_post':
 			$ctl = new PostsController();
 			$ctl->savePost();
 			break;
 
+		case
+		
+		//del
+		case 'post/del_post':
+			$ctl = new PostsController();
+			$ctl->savePost();
+			break;
+		
+		// products
+		case 'products/create_product':
+			$ctl = new ProductsController();
+			$ctl->create_product();
+			break;
+
+		case 'products/save_product':
+			$ctl = new ProductsController();
+			$ctl->saveProduct();
+			break;
 
 		default:
 			require_once 'Views/not_found.php';

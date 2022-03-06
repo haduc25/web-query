@@ -54,6 +54,19 @@ class BaseModel
         }
     }
 
+    //delete
+    public function delete($id){
+        $this->queryBuilder = "delete from $this->tableName where id = $this->id";
+        $stmt = $this->connect->prepare($this->queryBuilder);
+        try{
+
+            $stmt->execute();
+            return true;
+        }catch(Exception $ex){
+            var_dump($ex->getMessage());die;
+        }
+    }
+
 
 
 }

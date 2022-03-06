@@ -29,7 +29,7 @@
 		
 		<tbody>
 		<?php	foreach ($posts as $post) { 
-			// var_dump($users); exit();
+			// var_dump($products); exit();
 			?>
 				<tr>
 					<td><?=$post->id ?></td>
@@ -37,6 +37,45 @@
 					<td><?=$post->description ?></td>
 					<td><?=$post->author ?></td>
 					<td><?=$post->createby ?></td>
+					<td>
+						<a class="nut" href="">Sửa</a> |
+						<a class="nut" href="#">Xóa</a>
+					</td>
+				</tr>
+		<?php  } ?>
+			</tbody>
+	</table>
+
+	<!-- products -->
+	<div class="container">
+		<h1>Danh sách Products (Products)</h1>
+
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Supplier</th>
+				<th>Stock</th>
+				<td>
+					<a class="nut" style="padding: 5px 43px;" href="./products/create_product">Insert</a>
+				</td>
+			</tr>
+		</thead>
+
+		
+		<tbody>
+		<?php	foreach ($products as $product) { 
+			// var_dump($users); exit();
+			?>
+				<tr>
+					<td><?=$product->id ?></td>
+					<td><?=$product->name ?></td>
+					<td><?=$product->price ?></td>
+					<td><?=$product->supplier ?></td>
+					<td><?=$product->stock ?></td>
 					<td>
 						<a class="nut" href="#">Sửa</a> |
 						<a class="nut" href="#">Xóa</a>
