@@ -1,0 +1,32 @@
+table, th, tr, td
+{
+	border: 1px solid #ccc;
+
+}
+
+table
+{
+	border-collapse: collapse;
+}
+
+th, td
+{
+	padding: 5px;
+	text-align: center;
+}
+
+a
+{
+	font-weight: bold;
+	text-decoration: none;
+	color: #000;
+	opacity: 1;
+
+}
+
+a:hover
+{
+	text-decoration: underline;
+	opacity: .8;
+	color: darkred;
+}

@@ -1,0 +1,55 @@
+h2
+{
+	text-align: center;
+}
+
+.form-group
+{
+
+}
+
+.form-group label
+{
+	
+}
+
+.form-group input
+{
+	padding: 5px;
+	width: 50%;
+	margin: 5px;
+}
+
+.form-group button
+{
+	background-color: rgba(0, 0, 255, .5);
+	color: #fff;
+	/*border: 1px solid ;*/
+	padding: 8px 10px;
+	width: 50%;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.form-group button:hover
+{
+	background-color: #fff;
+	color: rgba(0, 0, 255, .5);
+}
+
+a.back-to-home 
+{
+	text-decoration: none;
+	padding: 8px 10px;
+	background-color: rgba(0, 0, 255, .5);
+	color: #000;
+	border: 1px solid #000;
+}
+
+a.back-to-home:hover
+{
+	opacity: .8;
+}
+
+
