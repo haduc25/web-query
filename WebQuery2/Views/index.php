@@ -78,7 +78,7 @@
 					<td><?=$product->stock ?></td>
 					<td>
 						<a class="nut" href="#">Sửa</a> |
-						<a class="nut" href="#">Xóa</a>
+						<a class="nut" href="./products/del_product?id=<?=$product->id?>">Xóa</a>
 					</td>
 				</tr>
 		<?php  } ?>

@@ -75,6 +75,17 @@
 			$ctl->saveProduct();
 			break;
 
+		//del product
+		case 'products/del_product':
+			$ctl = new ProductsController();
+			$ctl->delProduct();
+			break;	
+
+		//delete
+		case 'products/delete_product':
+			$ctl = new ProductsController();
+			$ctl->deleleProduct();
+			break;
 		default:
 			require_once 'Views/not_found.php';
 			break;

@@ -1,3 +1,9 @@
+<script>
+	 function sleep(time){
+      return new Promise((resolve)=>setTimeout(resolve,time)
+    )
+}
+ </script>
 <?php 
 
 /**
@@ -27,7 +33,38 @@ class ProductsController
 
 		$products->insert();
 		header("Location: ../index.php");
-	}	
+	}
+
+	//del
+	public function delProduct()
+	{
+		require_once "Views/products/del_product.php";
+	}
+
+	//delete 
+	public function deleleProduct()
+	{
+		if (isset($_GET['id']) && !empty($_GET['id'])) 
+		{
+			$products = new Products();
+			//echo $_GET['id'];
+			// var_dump($_GET['id']); exit();
+			
+			$products->delete($_GET['id']);
+
+			echo "<script type='text/javascript'> 
+			sleep(500).then(()=>{
+				console.log('you can see me after 2000 milliseconds');
+				alert('Đã xóa thành công! !');
+				location.href = '../index.php';
+			 }) </script>";
+
+			//  header('Location: ../index.php');
+		}
+
+		
+	}
 }
 
  ?>
+
