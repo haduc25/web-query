@@ -48,7 +48,17 @@
 			$ctl->deletePost();
 			break;
 		
+		//home edit post
+		case 'posts/editing_post': 
+			$ctl = new PostsController();
+			$ctl->editingPost();
+			$ctl->findPost();
+			break;
 
+		case 'posts/submit_edit_post': 
+			$ctl = new PostsController();
+			$ctl->editedPost();
+			break;
 
 
 

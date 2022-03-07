@@ -72,6 +72,50 @@ class BaseModel
         }
     }
 
+    //edit
+    function update(){
+        $this->queryBuilder = "update $this->tableName set ";
+
+        foreach ($this->columns as $col) {
+            if($this->{$col} == null){
+                continue;
+            }
+            $this->queryBuilder .= " $col = '" . $this->{$col} . "', ";
+        }
+
+        $this->queryBuilder = rtrim($this->queryBuilder, ", ");
+
+        $this->queryBuilder .= " where id = $this->id";
+
+        
+        $stmt = $this->conn->prepare($this->queryBuilder);
+        // var_dump($stmt);die;
+        try{
+            $stmt->execute();
+            return $this;
+        }catch(Exception $ex){
+            var_dump($ex->getMessage());
+            die;
+        }
+    }
+
+    //find 
+    public static function find($id){
+        // echo $id; die;
+        $model = new static();
+        $sql = "select * from $model->tableName where id = $id";
+        $stmt = $model->conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_CLASS, get_class($model));
+        // var_dump($result[0]); die;
+
+        if (count($result) > 0) {
+            return $result[0];
+        } else {
+            return null;  
+        }
+    }
+
 
 
 }
